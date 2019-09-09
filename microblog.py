@@ -1,0 +1,1 @@
+from appfolder import demoapp

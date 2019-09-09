@@ -1,6 +1,6 @@
-from demoapp import app
+from appfolder import demoapp
 
-@app.route('/')
-@app.route('/index')
+@demoapp.route('/')
+@demoapp.route('/index')
 def index():
     return "in indexfunction."
