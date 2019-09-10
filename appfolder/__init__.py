@@ -1,10 +1,18 @@
 from flask import Flask
 from config import Config
+from flask_sqlalchemy import SQLAlchemy 
+from flask_migrate import Migrate 
+
+
 
 demoapp = Flask(__name__)
 demoapp.config.from_object(Config)
 
-from appfolder import routes
+db = SQLAlchemy(demoapp)
+migrate = Migrate(demoapp, db)
 
 
-# comment 
+from appfolder import routes, models
+
+
+# comment s
